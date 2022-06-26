@@ -6,7 +6,10 @@ part 'location.g.dart';
 class Location {
   final String name;
   final String? country, state;
-  final double latitude, longitude;
+  @JsonKey(name: "lat")
+  final double latitude;
+  @JsonKey(name: "lon")
+  final double longitude;
 
   Location(
       {required this.name,
