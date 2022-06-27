@@ -12,6 +12,8 @@ class GeolocationDataProviderImpl implements IGeolocationDataProvider {
   final NetworkClient _client;
   const GeolocationDataProviderImpl({required final client}) : _client = client;
 
+  // First of all we need to get lat, lon of city
+
   @override
   Future<Location> searchLocation({required String queryLocation}) async {
     Location parser(dynamic json) {
@@ -25,12 +27,15 @@ class GeolocationDataProviderImpl implements IGeolocationDataProvider {
       return response;
     }
 
-    final response = _client.get(
+    final response = await _client.get(
         Configuration.geoPath, parser, <String, dynamic>{
       "q": queryLocation,
       "appid": Configuration.apiKey,
       "limit": "1"
     });
+
     return response;
   }
 }
+
+class GeolocationRequestException extends Error {}
