@@ -1,6 +1,7 @@
 # test_app
 
-A new Flutter project.
+![1](https://user-images.githubusercontent.com/80839199/175950849-6e9fbb42-3f43-4959-b920-78f5ec90654d.png)
+![2](https://user-images.githubusercontent.com/80839199/175950888-38b6d933-5be2-43b6-8929-59345475750e.png)
 
 ## Getting Started
 
