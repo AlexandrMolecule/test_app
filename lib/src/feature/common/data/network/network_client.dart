@@ -1,11 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
-
-import 'package:flutter/material.dart';
-
 import '../../../../core/configuration/configuration.dart';
 import 'api_ecxeptions.dart';
-
 class NetworkClient {
   final _client = HttpClient();
 
